@@ -7,13 +7,18 @@ function tocaSomPom(idElementoAudio){
 
     let contador = 0;
     //Estrutura de reptição - Enquanto
-      listaDeTeclas[0].onclick = tocaSomPom;
-
+    
       while(contador <listaDeTeclas.length){
-           listaDReTeclas[contador].onclick = function(){
+        listaDeTeclas[0].onclick = tocaSomPom;
+        const tecla = listaDeTeclas[contador]
+                const instrumento = tecla.classList[1];
+              const idAudio = `#som_ ${instrumento}`;
+                console.log(instrumento);
+           tecla.onclick = function(){
             tocaSom('#_tecla_splash');
            };
            contador= contador + 1;
+            console.log(contador);
           }
       
   
